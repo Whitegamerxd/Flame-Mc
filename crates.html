@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FLAME MC - Crates and Keys">
+    <title>FLAME MC - Crates</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff4500, #f2a900);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 150px;
+            margin-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            background: #333;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .crates-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .crate {
+            background: #222;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .crate:hover {
+            transform: translateY(-10px);
+        }
+
+        .crate h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #f2a900;
+        }
+
+        .crate p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .buy-button {
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            background-color: #f2a900;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #ff4500;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 2rem 0;
+            color: gray;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .crates-container {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .crate {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="minecraft_title.png" alt="FLAME MC Logo">
+    <h1>FLAME MC - Crates</h1>
+    <div class="nav">
+        <a href="home.html">Home</a>
+    </div>
+</header>
+
+<section class="section" id="crates">
+    <h2>Crate Keys</h2>
+    <div class="crates-container">
+        <div class="crate">
+            <h3>BOSS KEY</h3>
+            <p>Price: 2x 40 Rs</p>
+            <a href="buy.html" class="buy-button">Buy Now</a>
+        </div>
+        <div class="crate">
+            <h3>ELITE KEY</h3>
+            <p>Price: 2x 20 Rs</p>
+            <a href="buy.html" class="buy-button">Buy Now</a>
+        </div>
+        <div class="crate">
+            <h3>FIRE KEY</h3>
+            <p>Price: 2x 10 Rs</p>
+            <a href="buy.html" class="buy-button">Buy Now</a>
+        </div>
+        <div class="crate">
+            <h3>MEDIA KEY</h3>
+            <p>Requirements: 2x on 1 YouTube Video</p>
+            <a href="buy.html" class="buy-button">Buy Now</a>
+        </div>
+        <div class="crate">
+            <h3>ACE KEY</h3>
+            <p>Price: 2x 40 Rs</p>
+            <a href="buy.html" class="buy-button">Buy Now</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 FLAME MC. All rights reserved. | Website crafted by Whitegamer_XD</p>
+</footer>
+
+</body>
+</html>

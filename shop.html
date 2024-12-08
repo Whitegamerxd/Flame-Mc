@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - FLAME MC</title>
+    <style>
+        /* General styles for the webpage */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        /* Coin Package section style */
+        .coin-package {
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover effect for coin sections */
+        .coin-package:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Link styling */
+        .coin-link {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Coin title and price styling */
+        .coin-package h3 {
+            font-size: 24px;
+            color: #2a2a2a;
+        }
+
+        .coin-package p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Buy Now Button styling */
+        .buy-now-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for Buy Now Button */
+        .buy-now-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Page layout for product pages */
+        .product-page {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .rank{
+            color: black;
+        }
+    </style>
+</head>
+<body style="background-color: #2a2a2a;">
+    <!-- Main Page -->
+    <div id="main-page">
+        <div class="coin-package">
+            <a href="COINS.html" class="coin-link">
+                <h3>COINS</h3>
+                <p>Buy coins</p>
+            </a>
+        </div>
+
+        <div class="coin-package">
+            <a href="ranks.html" class="coin-link">
+                <h3>RANKS</h3>
+                <p>Buy ranks!</p>
+            </a>
+        </div>
+
+        <div class="coin-package">
+            <a href="crates.html" class="coin-link">
+                <h3>CRATES</h3>
+                <p class="rank">Buy crates!</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Product Pages -->
+    <div id="page-100-coins" class="product-page" style="display:none;">
+        <h3>Buy 100 Coins</h3>
+        <p>Price: $5.00</p>
+        <a href="https://your-store-link-100-coins" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+        </a>
+        <br><br>
+        <a href="#" onclick="goBack()">Back</a>
+    </div>
+
+    <div id="page-500-coins" class="product-page" style="display:none;">
+        <h3>Buy 500 Coins</h3>
+        <p>Price: $20.00</p>
+        <a href="https://your-store-link-500-coins" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+        </a>
+        <br><br>
+        <a href="#" onclick="goBack()">Back</a>
+    </div>
+
+    <div id="page-1000-coins" class="product-page" style="display:none;">
+        <h3>Buy 1000 Coins</h3>
+        <p>Price: $35.00</p>
+        <a href="https://your-store-link-1000-coins" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+        </a>
+        <br><br>
+        <a href="#" onclick="goBack()">Back</a>
+    </div>
+
+    <script>
+        // JavaScript to handle page navigation
+        const mainPage = document.getElementById('main-page');
+        const pages = {
+            "page-100-coins": document.getElementById('page-100-coins'),
+            "page-500-coins": document.getElementById('page-500-coins'),
+            "page-1000-coins": document.getElementById('page-1000-coins'),
+        };
+
+        // Show a specific page based on the hash
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.replace('#', '');
+            mainPage.style.display = hash ? 'none' : 'block';
+
+            Object.keys(pages).forEach(page => {
+                pages[page].style.display = page === hash ? 'block' : 'none';
+            });
+        });
+
+        // Go back to the main page
+        function goBack() {
+            window.location.hash = '';
+        }
+    </script>
+</body>
+</html>

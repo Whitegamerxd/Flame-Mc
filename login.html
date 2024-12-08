@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAME MC - Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ff4500;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background: #ff4500;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e63900;
+        }
+
+        .register {
+            margin-top: 15px;
+        }
+
+        .register a {
+            color: #ff4500;
+            text-decoration: none;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+        .discord-link {
+            margin-top: 20px;
+            display: inline-block;
+            background: #7289da;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .discord-link:hover {
+            background: #5b6eae;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            loginForm.classList.toggle('hidden');
+            registerForm.classList.toggle('hidden');
+        }
+
+        function redirectToHome(event) {
+            event.preventDefault();
+            window.location.href = 'home.html'; // Replace with the actual home page URL
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME TO FLAME MC</h1>
+
+        <!-- Login Form -->
+        <form id="login-form" onsubmit="redirectToHome(event)">
+            <input type="text" placeholder="Username or Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <!-- Registration Form -->
+        <form id="register-form" class="hidden">
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <!-- Toggle between forms -->
+        <div class="register">
+            <span id="toggle-message">New here? <a href="#" onclick="toggleForm()">Register now!</a></span>
+            <span id="toggle-message-2" class="hidden">Already have an account? <a href="#" onclick="toggleForm()">Login here!</a></span>
+        </div>
+
+        <a href="https://discord.gg/kcXnwuS7" target="_blank" class="discord-link">Join Our Discord</a>
+    </div>
+</body>
+</html>
